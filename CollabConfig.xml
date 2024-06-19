@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="com.constructorInjectionXML.Employee">
+	
+	<constructor-arg name="employeeId" value= "123" />
+	<constructor-arg name="employeeName" value= "Ram" />
+	<constructor-arg name="employeeRole" value= "Jr. Developer"/>
+	<constructor-arg name="employeeSalary" value= "30000.56"/>
+	<constructor-arg name="department" ref= "department1"/>
+	
+	</bean>
+	<bean id="department1" class="com.constructorInjectionXML.Department">
+	
+	<constructor-arg name="deptId" value= "003" />
+	<constructor-arg name="deptName" value= "Developer" />
+	</bean>
+
+</beans>
